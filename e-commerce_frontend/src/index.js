@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+// import Dashboard from "./Components/Dashboard/Dashboard";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
@@ -10,6 +11,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
+      {/* <Dashboard></Dashboard> */}
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -34,7 +34,6 @@ function Sidenav() {
          <Menu
          items={menuSidenav}
          >
-
          </Menu>
     </div>
   );
