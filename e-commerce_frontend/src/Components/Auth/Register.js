@@ -1,5 +1,6 @@
 import { Button, Form, Input, Row, Col, Card, Select, DatePicker } from "antd";
 import moment from "moment";
+import Header from "../Home/Header";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -33,11 +34,15 @@ function Register() {
 
   return (
     <div>
+      <div>
+        <Header></Header>
+      </div>
+
       <Row justify="center">
         <Col span={10}>
           <Card
             bordered={true}
-            style={{ boxShadow: "0 1px 4px rgba(0, 0, 0, 15)", marginTop: 20 }}
+            style={{ boxShadow: "0 1px 4px rgba(0, 0, 0, 15)", marginTop: 50 }}
           >
             <span>S'INSCRIRE</span>
 

@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import Header from "../Home/Header";
 import Loader from "../Loader/Loader";
 
 function Post() {
@@ -57,6 +58,9 @@ function Post() {
 
   return (
     <div>
+      <div>
+        <Header></Header>
+      </div>
       <div className="header">Post {posts.length}</div>
       <div>{AllPostsRender()}</div>
     </div>

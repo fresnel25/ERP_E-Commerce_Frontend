@@ -1,5 +1,6 @@
 import { Button, Form, Input, Row, Col, Card } from "antd";
 import './Login.css'
+import Header from "../Home/Header";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
@@ -37,11 +38,14 @@ function Login() {
 
   return (
     <div>
+      <div>
+        <Header></Header>
+      </div>
       <Row justify="center">
         <Col span={10}>
           <Card
             bordered={true}
-            style={{ boxShadow: "0 1px 4px rgba(0, 0, 0, 15)", marginTop: 80 }}
+            style={{ boxShadow: "0 1px 4px rgba(0, 0, 0, 15)", marginTop: 150 }}
           >
             <Form onFinish={onFinish} autoComplete="off">
 
