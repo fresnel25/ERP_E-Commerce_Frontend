@@ -1,11 +1,10 @@
-import Sidenav from "../Sidenav/Sidenav";
-import "./Dashboard.css";
-import Head from "../Header/Head";
-import Footer from "../Footer/Footer";
+import Sidenav from "../../Sidenav/Sidenav";
+import Head from "../../Header/Head";
+import Footer from "../../Footer/Footer";
 
-function Dashboard() {
-  return (
-    <div style={{ display: "flex", height: "100vh" }} className="MenuContent">
+function AllCategories(){
+    return(
+        <div style={{ display: "flex", height: "100vh" }} className="MenuContent">
       <div>
         <Sidenav></Sidenav>
       </div>
@@ -14,14 +13,14 @@ function Dashboard() {
           <Head></Head>
         </div>
         <div className="Content">
-          contenu
+          All Categories
         </div>
         <div>
           <Footer></Footer>
         </div>
       </div>
     </div>
-  );
+    );
 }
-
-export default Dashboard;
+export default AllCategories
+  

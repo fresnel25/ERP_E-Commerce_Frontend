@@ -13,9 +13,10 @@ import {
   ShoppingOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Sidenav() {
+
   const menuSidenav = [
     {
       label: (
@@ -23,6 +24,7 @@ function Sidenav() {
           <span>Dashboard</span>
         </Link>
       ),
+      key: "/dashboard",
       icon: <HomeOutlined></HomeOutlined>,
     },
     {
@@ -32,20 +34,20 @@ function Sidenav() {
       children: [
         {
           label: (
-            <Link to="/add categorie">
+            <Link to="/dashboard/AddCategory">
               <span>Ajouter Categorie </span>
             </Link>
           ),
-          key: "AddCategorie",
+          key: "/dashboard/AddCategory",
           icon: <PlusOutlined></PlusOutlined>,
         },
         {
           label:(
-            <Link to="/listAllcategories">
+            <Link to="/dashboard/AllCategories">
               <span>Liste Categorie</span>
             </Link>
           ),
-          key: "ListCategorie",
+          key: "Allcategories",
           icon: <OrderedListOutlined></OrderedListOutlined>,
         },
       ],
@@ -57,20 +59,20 @@ function Sidenav() {
       children: [
         {
           label:(
-            <Link to="/add post">
+            <Link to="/dashboard/AddPost">
               <span>Ajouter Article</span>
             </Link>
           ),
-          key: "AddArticle",
+          key: "/dashboard/AddPost",
           icon: <PlusOutlined></PlusOutlined>,
         },
         {
           label:(
-            <Link to="/listAllposts">
+            <Link to="/dashboard/AllPosts">
               <span>Liste Article</span>
             </Link>
           ),
-          key: "ListArticle",
+          key: "/dashboard/AllPosts",
           icon: <OrderedListOutlined></OrderedListOutlined>,
         },
       ],
@@ -177,11 +179,10 @@ function Sidenav() {
           mode="inline"
           items={menuSidenav}
           style={{ height: "100vh", width: "37vh" }}
+          // onClick={(item)=>
+          // navigate(item.key)
+          // }
         ></Menu>
-      </div>
-      <div style={{ display: "flex", flexDirection: "column", width: "171vh" }}>
-        <div className="Menu">www</div>
-        <div className="Content"></div>
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import Header from "../Home/Header";
+import Header from "./Header";
 import Loader from "../Loader/Loader";
 
-function Post() {
+function Home() {
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
 
@@ -67,4 +67,4 @@ function Post() {
   );
 }
 
-export default Post;
+export default Home;
